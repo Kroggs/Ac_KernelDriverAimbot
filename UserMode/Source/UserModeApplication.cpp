@@ -41,7 +41,7 @@ int main()
         UserPlayer.update();
         ClosestPlayer.update();
 
-        if (ClosestPlayer.getHealth() > 0)
+        if (ClosestPlayer.getHealth() > 0 && ClosestPlayer.getTeam() != UserPlayer.getTeam())
             UserPlayer.aimAt(getAngleX(UserPlayer, ClosestPlayer), getAngleY(UserPlayer, ClosestPlayer));
     }
 
